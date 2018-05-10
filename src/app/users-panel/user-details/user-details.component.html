@@ -1,0 +1,70 @@
+<div *ngIf="user" class="col-lg-12 col-md-11 user-details">
+  <form #formRef="ngForm" (ngSubmit)="saveUser(formRef.valid, user)">
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" #nameRef="ngModel" required minlength="2" [(ngModel)]="user.name" name="name" class="form-control">
+      <div class="danger" *ngIf="nameRef.touched || nameRef.dirty || formRef.submitted">
+        <div class="error" *ngIf="nameRef.errors?.required">
+          Name is required
+        </div>
+        <div class="error" *ngIf="nameRef.errors?.minlength">
+          This field must have at least {{nameRef.errors.minlength.requiredLength}} characters.
+        </div>
+      </div>
+
+      <label for="lastname">LastName:</label>
+      <input #lastnameRef="ngModel" type="text" required minlength="3" [(ngModel)]="user.lastname" name="lastname" class="form-control"
+        id="lastname">
+      <div class="danger" *ngIf="lastnameRef.touched || lastnameRef.dirty || formRef.submitted">
+        <div class="error" *ngIf="lastnameRef.errors?.required">
+          Last Name is required
+        </div>
+        <div class="error" *ngIf="lastnameRef.errors?.minlength">
+          This field must have at least {{lastnameRef.errors.minlength.requiredLength}} characters.
+        </div>
+      </div>
+
+
+      <label for="city">City:</label>
+      <input #cityRef="ngModel" type="text" required minlength="3" [(ngModel)]="user.city" name="city" class="form-control" id="city">
+      <div class="danger" *ngIf="cityRef.touched || cityRef.dirty || formRef.submitted">
+        <div class="error" *ngIf="cityRef.errors?.required">
+          City is required
+        </div>
+        <div class="error" *ngIf="cityRef.errors?.minlength">
+          This field must have at least {{cityRef.errors.minlength.requiredLength}} characters.
+        </div>
+      </div>
+
+
+      <label for="Country">Country:</label>
+      <input #countryRef="ngModel" type="text" required minlength="3" [(ngModel)]="user.country" name="country" class="form-control"
+        id="country">
+      <div class="danger" *ngIf="countryRef.touched || countryRef.dirty || formRef.submitted">
+        <div class="error" *ngIf="countryRef.errors?.required">
+          Country is required
+        </div>
+        <div class="error" *ngIf="countryRef.errors?.minlength">
+          This field must have at least {{countryRef.errors.minlength.requiredLength}} characters.
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="weather" *ngIf="user.temperature || user.humidity">
+      <h6>Weather in your city: </h6>
+      <p>Temperature: {{user.temperature}} celsius degrees</p>
+      <p>Humidity: {{user.humidity}} percent</p>
+    </div>
+
+
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit">Save User</button>
+      <button *ngIf="user.id" class="btn btn-danger" type="button" (click)="deleteUser(user); 
+              $event.stopPropagation()">
+              Delete User
+            </button>
+    </div>
+  </form>
+</div>

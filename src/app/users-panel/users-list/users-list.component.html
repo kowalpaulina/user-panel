@@ -1,0 +1,33 @@
+<div class="col-lg-12 col-md-11">
+    <table class="table table-border">
+        <thead>
+            <tr>
+                <th> # </th>
+                <th> Name </th>
+                <th> Last Name </th>
+                <th> City </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users; let i = index" class="playlist-row">
+                <td> {{ i + 1 || "" }}. </td>
+                <td> {{ user.name || "" }} </td>
+                <td> {{ user.lastname || "" }} </td>
+                <td> {{ user.city || "" }} </td>
+                <td>
+                    <button class="btn btn-secondary" (click)="editUser(user)">Edit</button>
+                    <button class="btn btn-danger" (click)="deleteUser(user)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+
+<div class="form-group">
+    <button class="btn btn-success" [routerLink]="['new']">Add user</button>
+</div>
+
+
+
+<router-outlet></router-outlet>

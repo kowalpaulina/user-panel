@@ -1,0 +1,23 @@
+$gold: #c49e5d;
+
+.table td {
+  border-top: 1px solid $gold;
+}
+
+.table thead th {
+  border-bottom: 1px solid $gold;
+}
+
+@media (max-width: 600px) {
+  .btn {
+    margin-bottom: 10px;
+  }
+
+  .table td {
+    vertical-align: middle;
+  }
+
+  .btn-success {
+    margin-left: 15px;
+  }
+}

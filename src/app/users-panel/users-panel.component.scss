@@ -1,0 +1,15 @@
+@media (min-width: 600px) {
+  body {
+    overflow-x: visible;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 98%;
+  }
+
+  .row {
+    justify-content: center;
+  }
+}

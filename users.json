@@ -1,0 +1,47 @@
+{
+  "users": [
+    {
+      "name": "Arnold",
+      "lastname": "Wieczorek",
+      "city": "Bangalore",
+      "country": "Indie",
+      "id": "F90oVwR"
+    },
+    {
+      "name": "Paulina",
+      "lastname": "Kowal",
+      "city": "Kraków",
+      "country": "Polska",
+      "id": "V5zzpQe",
+      "temperature": "10",
+      "humidity": "95"
+    },
+    {
+      "name": "Arnold Jerzy Madej III",
+      "lastname": "Oberschlesien",
+      "city": "Katowice",
+      "country": "Polska",
+      "id": "vs3A2iH",
+      "temperature": "17",
+      "humidity": "91"
+    },
+    {
+      "name": "Ola",
+      "lastname": "Niemczyk",
+      "city": "Gliwice",
+      "country": "Śląsk",
+      "temperature": "16",
+      "humidity": "92",
+      "id": "NvRhf_B"
+    },
+    {
+      "name": "Ann",
+      "lastname": "Zaymos",
+      "city": "Alabama",
+      "country": "USA",
+      "temperature": "",
+      "humidity": "",
+      "id": "aMvOQrB"
+    }
+  ]
+}

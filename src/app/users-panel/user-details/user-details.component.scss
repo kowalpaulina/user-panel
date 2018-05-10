@@ -1,0 +1,23 @@
+$gold: #c49e5d;
+
+.user-details {
+  margin: 30px 0;
+  padding-top: 30px;
+  border: 1px solid $gold;
+}
+
+.error {
+  margin: 10px 0 15px 0;
+  color: #ffa500;
+}
+
+.weather {
+  margin: 35px 0;
+}
+
+@media (max-width: 600px) {
+  .user-details form {
+    max-width: 98%;
+    margin: 0 auto;
+  }
+}
