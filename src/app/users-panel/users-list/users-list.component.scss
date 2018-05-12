@@ -8,7 +8,44 @@ $gold: #c49e5d;
   border-bottom: 1px solid $gold;
 }
 
-@media (max-width: 600px) {
+.btn-add {
+  background-color: #7647a2;
+  border: 1px solid #7647a2;
+  color: #fff;
+
+  &:active {
+    background-color: #663096;
+    border: 1px solid #663096;
+  }
+
+  &:hover {
+    background-color: #663096;
+    border: 1px solid #663096;
+  }
+
+  &:focus {
+    background-color: #663096;
+    border: 1px solid #663096;
+  }
+
+  &:visited {
+    background-color: #663096;
+    border: 1px solid #663096;
+    box-shadow: 0 0 0 0.2rem rgba(#663096, 0.5) !important;
+  }
+}
+
+.btn-add:not([disabled]):not(.disabled):active,
+.btn-add:not([disabled]):not(.disabled).active,
+.show > .btn-add.dropdown-toggle {
+  background-color: #663096 !important;
+  border: 1px solid #663096 !important;
+  box-shadow: 0 0 0 0.2rem rgba(#663096, 0.5) !important;
+  border-color: #663096;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
   .btn {
     margin-bottom: 10px;
   }
@@ -20,4 +57,9 @@ $gold: #c49e5d;
   .btn-success {
     margin-left: 15px;
   }
+}
+
+@media (max-width: 550px) {
+  max-width: 550px;
+  overflow-x: auto;
 }

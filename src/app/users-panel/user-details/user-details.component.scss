@@ -16,8 +16,15 @@ $gold: #c49e5d;
 }
 
 @media (max-width: 600px) {
-  .user-details form {
-    max-width: 98%;
-    margin: 0 auto;
+  .user-details {
+    width: 91%;
+    margin: 30px 0;
+    border: none;
+    border-top: 1px solid $gold;
+
+  }form {
+
+    max-width: 60%;
+
   }
 }

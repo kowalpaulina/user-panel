@@ -24,7 +24,6 @@
         </div>
       </div>
 
-
       <label for="city">City:</label>
       <input #cityRef="ngModel" type="text" required minlength="3" [(ngModel)]="user.city" name="city" class="form-control" id="city">
       <div class="danger" *ngIf="cityRef.touched || cityRef.dirty || formRef.submitted">
