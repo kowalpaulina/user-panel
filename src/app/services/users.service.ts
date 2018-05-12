@@ -79,10 +79,10 @@ export class UsersService {
   }
 
   public getWeather(city):Observable<any> {
-    let temperatureApi = `https://query.yahooapis.com/v1/public/yql?q=select item from weather.forecast where woeid in (select woeid from geo.places(1) where text='${city}')and u='c'&format=json`;
-    let humidityApi = `https://query.yahooapis.com/v1/public/yql?q=select atmosphere from weather.forecast where woeid in (select woeid from geo.places(1) where text='${city}')and u='c'&format=json`;
-    let temperature = this.http.get(temperatureApi);
-    let humidity = this.http.get(humidityApi);
+    const temperatureApi = `https://query.yahooapis.com/v1/public/yql?q=select item from weather.forecast where woeid in (select woeid from geo.places(1) where text='${city}')and u='c'&format=json`;
+    const humidityApi = `https://query.yahooapis.com/v1/public/yql?q=select atmosphere from weather.forecast where woeid in (select woeid from geo.places(1) where text='${city}')and u='c'&format=json`;
+    const temperature = this.http.get(temperatureApi);
+    const humidity = this.http.get(humidityApi);
 
     return forkJoin([temperature, humidity]);
   }
